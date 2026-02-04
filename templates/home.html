@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+ <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+    <title>Product List</title>
+</head>
+<body>
+    <h1>Product List</h1>
+    <ul>
+        {% for thing in things %}
+            <li><a href="{% url 'item' thing.name %}">{{ thing.name }}</a></li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'new_product' %}">Add New Product</a>
+</body>
+</html>

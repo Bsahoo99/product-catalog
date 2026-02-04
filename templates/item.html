@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+    <title>{{ thing.name }}</title>
+</head>
+<body>
+    <h1>{{ thing.name }}</h1>
+    <table>
+        <tr>
+            <th>Manufacturer:</th>
+            <td>{{ thing.manufacturer }}</td>
+        </tr>
+        <tr>
+            <th>Cost:</th>
+            <td>${{ thing.cost }}</td>
+        </tr>
+        <tr>
+            <th>Weight:</th>
+            <td>{{ thing.weight }} lbs</td>
+        </tr>
+    </table>
+    <img src="{{ thing.image }}" alt="{{ thing.name }}">
+    <br><br>
+    <a href="{% url 'home' %}">Back to Home</a>
+</body>
+</html>
