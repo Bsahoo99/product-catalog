@@ -14,7 +14,7 @@ Products are listed on the home page with links to individual detail pages. New 
 ## Project Structure
 
 ```
-project-2-django-product-catalog/
+product-catalog/
 ├── manage.py
 ├── pyproject.toml
 ├── poetry.lock
